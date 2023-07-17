@@ -1,0 +1,35 @@
+<div class="main-content center">
+    <h1>Responsive Forms</h1>
+
+
+    <div class="mat-elevation-z16">
+        <h2>Test Category Details</h2>
+        <mat-card>
+            <mat-card-content>
+                <form class="dataform"[formGroup]="CategoryDetailsForm">
+                    <mat-form-field apparance="fill">
+                        <mat-label>Category Name</mat-label>
+                        <input matInput required formControlName="categoryName" placeholder="Enter Category Name">
+                        <mat-error>
+                             {{showErrorMessage('categoryName')}}
+                            </mat-error>
+                    </mat-form-field>
+                    <br><br>
+                    <mat-checkbox formControlName="active">
+                        Active
+                    </mat-checkbox>
+                </form>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-flat-button color="warn" (click)="cancelTestCategory()">cancel</button>
+                <button mat-flat-button color="accent" (click)="resetForm()" [disabled]="!CategoryDetailsForm.dirty">Reset</button>
+                <button mat-flat-button color="primary" (click)="saveTestCategory()"
+                 [disabled]="!CategoryDetailsForm.valid || !CategoryDetailsForm.dirty">Save</button>
+            </mat-card-actions>
+        </mat-card>
+
+
+    </div>
+
+
+</div>

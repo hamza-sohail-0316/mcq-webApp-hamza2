@@ -1,0 +1,11 @@
+.center{
+    text-align: center;
+}
+.main-content{
+    margin-top: 70px;
+    padding: 15px 50px;
+    min-height: calc(100vh-123px);
+}
+button{
+    margin-left: 10px;
+}
